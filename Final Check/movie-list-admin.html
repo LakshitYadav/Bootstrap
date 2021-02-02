@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Font+Name"/>
+    <title>Movies</title>
+    <style>
+      html,body{
+        overflow-x: hidden;
+      }
+      body{
+        background-color: brown;
+      }
+      nav {
+        background-color:black;
+      }
+      .material-icons {
+        vertical-align: middle;
+      }
+      .icon-size {
+        font-size: 1.5rem;
+      }
+      .wrapper {
+        position: relative;
+        display: inline-block;
+      }
+      #search {
+        width: 100%;
+        height: 45vh;
+        background-image: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+        background-repeat: repeat-x;
+        object-fit: cover;
+      }
+      .search-wrapper {
+        margin: 0 auto;
+        float: none;
+        top: 0;
+        width: 95%;
+        display: flex;
+        align-items: center;
+      }
+      .search-wrapper input {
+        width: 100%;
+      }
+      #search-container{
+        margin-top: 6rem;
+      }
+      .form-control{
+        background-color: #000000;
+      }
+      #basic-addon1{
+        background-color: #000000;
+      }
+      .card {
+        max-width: 22rem;
+        border-color: black;
+        background-color: #000000;
+      }
+      .card-title{
+        color: #d3d3d3;
+      }
+      #teaser {
+        font-size: 1rem;
+      }
+      #schedule{
+        font-size: 0.75rem;
+      }
+      #edit-button {
+        background-color:brown;
+      }
+      footer {
+        background-color:black;
+        height: 3rem;
+        margin-top: 2%;
+      }
+    </style>
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand text-white">
+        <i class="material-icons icon-size">movie_filter</i>Movie Cruiser</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="movie-list-admin.html">Movies</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="wrapper mb-4" id="search">
+      <div class="container-fluid" id="search-container">
+        <div class="search-wrapper input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text border-danger" id="basic-addon1">
+              <i class="material-icons icon-size text-white">search</i>
+            </span>
+          </div>
+          <input
+            type="text"
+            class="form-control border-danger"
+            placeholder="Search Movie"
+            aria-label="search"
+            aria-describedby="basic-addon1"/>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid wrapper flex-grow-1">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 col-12">
+          <div class="card-deck">
+            <div class="card mt-2 h-100">
+              <img src="https://upload.wikimedia.org/wikipedia/en/4/43/Gifted_poster.jpeg" class="card-img-top" alt="gifted"/>
+              <div class="card-body">
+                <h5 class="mb-1 card-title font-weight-normal">
+                  Gifted
+                  <span class="float-right" id="teaser">
+                    <a href="https://www.imdb.com/video/vi3537025049?playlistId=tt4481414&ref_=tt_ov_vi" target="_blank" rel="noopener noreferrer">Teaser</a></span>
+                </h5>
+                <div>
+                  <small class="text-warning">
+                    <span class="badge badge-success ml-1"> Active </span>Drama
+                    <span class="float-right text-white">
+                      <i class="material-icons icon-size text-warning">star</i>IMDB: 7.6/10</span>
+                  </small>
+                </div>
+                <div>
+                  <small class="text-info">
+                    <i class="material-icons" id="schedule">schedule</i>Launch
+                  </small>
+                  <a href="edit-movie.html" class="btn float-right text-white mt-2" id="edit-button">
+                    <i class="material-icons" id="edit">edit</i> Edit</a>
+                </div>
+                <small class="text-info"> 12/04/2017 </small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 col-12">
+          <div class="card-deck">
+            <div class="card mt-2 h-100">
+              <img src="https://upload.wikimedia.org/wikipedia/en/4/43/Gifted_poster.jpeg" class="card-img-top" alt="gifted"/>
+              <div class="card-body">
+                <h5 class="mb-1 card-title font-weight-normal"> Gifted
+                  <span class="float-right" id="teaser">
+                    <a href="https://www.imdb.com/video/vi3537025049?playlistId=tt4481414&ref_=tt_ov_vi" target="_blank" rel="noopener noreferrer" >Teaser</a></span>
+                </h5>
+                <div>
+                  <small class="text-warning">
+                    <span class="badge badge-success ml-1"> Active </span>Drama
+                    <span class="float-right text-white">
+                      <i class="material-icons icon-size text-warning">star</i>IMDB: 7.6/10</span>
+                  </small>
+                </div>
+                <div>
+                  <small class="text-info">
+                    <i class="material-icons" id="schedule">schedule</i>Launch
+                  </small>
+                  <a href="edit-movie.html" class="btn float-right text-white mt-2" id="edit-button">
+                    <i class="material-icons" id="edit">edit</i> Edit</a>
+                </div>
+                <small class="text-info"> 12/04/2017 </small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 col-12">
+          <div class="card-deck">
+            <div class="card mt-2 h-100">
+              <img src="https://upload.wikimedia.org/wikipedia/en/4/43/Gifted_poster.jpeg" class="card-img-top" alt="gifted"/>
+              <div class="card-body">
+                <h5 class="mb-1 card-title font-weight-normal">Gifted
+                  <span class="float-right" id="teaser">
+                    <a href="https://www.imdb.com/video/vi3537025049?playlistId=tt4481414&ref_=tt_ov_vi" target="_blank" rel="noopener noreferrer" >Teaser</a></span>
+                </h5>
+                <div>
+                  <small class="text-warning">
+                    <span class="badge badge-success ml-1"> Active </span>Drama
+                    <span class="float-right text-white">
+                      <i class="material-icons icon-size text-warning">star</i>IMDB: 7.6/10</span>
+                  </small>
+                </div>
+                <div>
+                  <small class="text-info">
+                    <i class="material-icons" id="schedule">schedule</i>Launch
+                  </small>
+                  <a href="edit-movie.html" class="btn float-right text-white mt-2" id="edit-button" >
+                    <i class="material-icons" id="edit">edit</i> Edit</a>
+                </div>
+                <small class="text-info"> 12/04/2017 </small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 col-12">
+          <div class="card-deck">
+            <div class="card mt-2 h-100">
+              <img src="https://upload.wikimedia.org/wikipedia/en/4/43/Gifted_poster.jpeg" class="card-img-top" alt="gifted"/>
+              <div class="card-body">
+                <h5 class="mb-1 card-title font-weight-normal">Gifted
+                  <span class="float-right" id="teaser">
+                    <a href="https://www.imdb.com/video/vi3537025049?playlistId=tt4481414&ref_=tt_ov_vi" target="_blank" rel="noopener noreferrer">Teaser</a></span>
+                </h5>
+                <div>
+                  <small class="text-warning">
+                    <span class="badge badge-success ml-1"> Active </span>Drama
+                    <span class="float-right text-white">
+                      <i class="material-icons icon-size text-warning">star</i>IMDB: 7.6/10</span>
+                  </small>
+                </div>
+                <div>
+                  <small class="text-info">
+                    <i class="material-icons" id="schedule">schedule</i>Launch
+                  </small>
+                  <a href="edit-movie.html" class="btn float-right text-white mt-2" id="edit-button">
+                    <i class="material-icons" id="edit">edit</i> Edit</a>
+                </div>
+                <small class="text-info"> 12/04/2017 </small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 col-12">
+          <div class="card-deck">
+            <div class="card mt-2 h-100">
+              <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg" alt="interstellar"/>
+              <div class="card-body">
+                <h5 class="mb-1 card-title font-weight-normal">Interstellar
+                  <span class="float-right" id="teaser">
+                    <a href="https://www.imdb.com/video/vi1586278169?playlistId=tt0816692&ref_=tt_ov_vi" target="_blank" rel="noopener noreferrer">Teaser</a></span>
+                </h5>
+                <div>
+                  <small class="text-warning">
+                    <span class="badge badge-success ml-1"> Active </span>Adventure
+                    <span class="float-right text-white">
+                      <i class="material-icons icon-size text-warning">star</i>IMDB: 8.6/10</span>
+                  </small>
+                </div>
+                <div>
+                  <small class="text-info">
+                    <i class="material-icons" id="schedule">schedule</i> Launch
+                  </small>
+                  <a href="edit-movie.html" class="btn float-right text-white mt-2" id="edit-button"><i class="material-icons" id="edit">edit</i> Edit</a>
+                </div>
+                <small class="text-info"> 07/11/2014 </small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 col-12">
+          <div class="card-deck">
+            <div class="card mt-2 h-100">
+              <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg" alt="interstellar"/>
+              <div class="card-body">
+                <h5 class="mb-1 card-title font-weight-normal"> Interstellar
+                  <span class="float-right" id="teaser">
+                    <a href="https://www.imdb.com/video/vi1586278169?playlistId=tt0816692&ref_=tt_ov_vi" target="_blank" rel="noopener noreferrer">Teaser</a></span>
+                </h5>
+                <div>
+                  <small class="text-warning">
+                    <span class="badge badge-success ml-1"> Active </span>Adventure
+                    <span class="float-right text-white">
+                      <i class="material-icons icon-size text-warning">star</i>IMDB: 8.6/10</span>
+                  </small>
+                </div>
+                <div>
+                  <small class="text-info">
+                    <i class="material-icons" id="schedule">schedule</i>Launch
+                  </small>
+                  <a href="edit-movie.html" class="btn float-right text-white mt-2" id="edit-button">
+                    <i class="material-icons" id="edit">edit</i> Edit</a>
+                </div>
+                <small class="text-info"> 07/11/2014 </small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 col-12">
+          <div class="card-deck">
+            <div class="card mt-2 h-100">
+              <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg" alt="interstellar"/>
+              <div class="card-body">
+                <h5 class="mb-1 card-title font-weight-normal">Interstellar
+                  <span class="float-right" id="teaser">
+                    <a href="https://www.imdb.com/video/vi1586278169?playlistId=tt0816692&ref_=tt_ov_vi" target="_blank" rel="noopener noreferrer">Teaser</a></span>
+                </h5>
+                <div>
+                  <small class="text-warning">
+                    <span class="badge badge-danger ml-1"> Inactive </span>Adventure
+                    <span class="float-right text-white">
+                      <i class="material-icons icon-size text-warning">star</i>IMDB: 8.6/10</span>
+                  </small>
+                </div>
+                <div>
+                  <small class="text-info">
+                    <i class="material-icons" id="schedule">schedule</i>Launch
+                  </small>
+                  <a href="edit-movie.html" class="btn float-right text-white mt-2" id="edit-button">
+                    <i class="material-icons" id="edit">edit</i> Edit</a>
+                </div>
+                <small class="text-info"> 07/11/2014 </small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 col-12">
+          <div class="card-deck">
+            <div class="card mt-2 h-100">
+              <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg" alt="interstellar"/>
+              <div class="card-body">
+                <h5 class="mb-1 card-title font-weight-normal">Interstellar
+                  <span class="float-right" id="teaser">
+                    <a href="https://www.imdb.com/video/vi1586278169?playlistId=tt0816692&ref_=tt_ov_vi" target="_blank" rel="noopener noreferrer">Teaser</a></span>
+                </h5>
+                <div>
+                  <small class="text-warning">
+                    <span class="badge badge-success ml-1"> Active </span>Adventure
+                    <span class="float-right text-white">
+                      <i class="material-icons icon-size text-warning">star</i>IMDB: 8.6/10</span>
+                  </small>
+                </div>
+                <div>
+                  <small class="text-info">
+                    <i class="material-icons" id="schedule">schedule</i>Launch
+                  </small>
+                  <a href="edit-movie.html" class="btn float-right text-white mt-2" id="edit-button"><i class="material-icons" id="edit">edit</i> Edit</a>
+                </div>
+                <small class="text-info"> 07/11/2014 </small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="text-white text-lg-start container-fluid">
+      <!-- Copyright -->
+      Copyright 2021
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
